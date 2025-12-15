@@ -78,9 +78,9 @@ class ImageHasher:
     def _generate_combined_hash(self, image: Image.Image) -> int:
         phash = self._generate_phash(image)           
         block_hash = self._generate_block_mean_hash(image)  
-        warr_hash = self._generate_warr_hildreth_hash(image)  
+        marr_hash = self._generate_marr_hildreth_hash(image)  
         
-        combined_bytes = phash + block_hash + warr_hash  
+        combined_bytes = phash + block_hash + marr_hash  
         
         combined_int = 0
         for byte in combined_bytes:
